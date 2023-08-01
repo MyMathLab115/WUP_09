@@ -9,7 +9,6 @@ output:
     toc_depth: 5
 ---
 
- setwd("C:/Users/16617/Documents/AVC/Math115/WUP_09")
 
 ```{r include=FALSE,echo=FALSE}
 require(tigerstats)
@@ -52,6 +51,15 @@ print(results)
 
 ### Best Two regressor model
 
+The best two variables to predict weight, are height and width.
+
+```{r}
+perchModel=lm(Weight~Height+Width,data=perch)
+summary(perchModel) 
+```
+
+The best model for the adjusted R square is 0.94
+
 
 ## Pike
 ```{r}
@@ -69,3 +77,5 @@ pike = filter(fishData, Species == "Pike")
 ### Best Two regressor model
 
 ## Final Summary Statements
+
+## Discussion and conclusion

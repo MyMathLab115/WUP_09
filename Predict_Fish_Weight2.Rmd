@@ -18,17 +18,20 @@ require(leaps)
 
 # Predicting Fish Weight
 ## get data
+
 ```{r}
 fishData=read.csv("Fish.csv")
 ```
 
 
 ## Perch
+
 ```{r}
 perch = filter(fishData, Species == "Perch")
 ```
 
 ### Best Models
+
 ```{r}
 models = regsubsets(Weight ~ Length1+Length2+Length3+Height+Width, data=perch,
                     nvmax=5)
